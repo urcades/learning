@@ -1,12 +1,10 @@
-use unicode_segmentation::UnicodeSegmentation;
+mod reverse_string;
+mod gigasecond_from;
 
 fn main() {
-    
-    fn reverse(input: &str) -> String {
-        let reversed_string: String = input.to_string().graphemes(true).rev().collect();
-        reversed_string
-    }
-    
-    println!("{}", reverse("uüu"));
-    println!("{}", reverse("I love you."));
+    // Reverse String
+    println!("{}", reverse_string::run("uüu"));
+    println!("{}", reverse_string::run("I love you."));
+    // Gigasecond
+    println!("{}", gigasecond_from::run("DATE GOES HERE"));
 }
